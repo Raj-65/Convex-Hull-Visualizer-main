@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KPS Algorithm</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>KPS Algorithm</h1>
+    </header>
+
+    <div class="main">
+      <div id="text-container-left">
+        
+        Add points by tapping in the box or from a json file
+
+      </div>
+      <div class="svg-container"></div>
+
+      <div class="guide-container">
+        <button id="prev-button" disabled>
+          <p>Previous Step</p>
+        </button>
+        <button id="next-button" disabled>
+          <p>Next Step</p>
+        </button>
+        <button id="clear-button">
+          <p>Clear</p>
+        </button>
+        <button id="get-file">Add File Points</button>
+        <input type="file" id="points-file" style="display: none;" multiple accept=".json">
+        <button id="add-random-button"><p>Add 50 Random points</p></button>
+        <button id="skip-steps" disabled><p>Skip 5 Steps</p></button>
+        <button id="skip-end" disabled><p>Skip to Complete Hull</p></button>
+      </div>
+      <div style="width: 1px;height: 15px;"></div>
+    </div>
+
+    <script src="./kps.js"></script>
+  </body>
+</html>

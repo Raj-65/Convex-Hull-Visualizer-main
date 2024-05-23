@@ -1,0 +1,205 @@
+/* CSS code */
+body {
+  /* overflow: hidden; */
+  background-color: #0f0f0f;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  min-height: 0;
+}
+
+header {
+  background-color: #232d3f;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+.main {
+  display: flex;
+  justify-content: center; /* Adjust as needed */
+  /* width: 100%; */
+  align-items: flex-start; /* Adjust as needed */
+  flex-wrap: wrap; /* Allow wrapping */
+  height: calc(100vh - 80px); /* Adjust based on your header height */
+}
+
+#text-container-left {
+  position: relative;
+  top: 13%;
+  width: 20%; /* Adjust this value as needed */
+  word-wrap: break-word;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 5%;
+  padding-right: 4%;
+  font-size: 25px;
+}
+
+.svg-container {
+  position: relative;
+  top: 5%;
+  width: 70%; /* Adjust this value as needed */
+  height: 65%;
+  border: 2px solid #444;
+  margin-bottom: 20px;
+}
+
+.guide-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  top: 5%;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: space-around;
+  background-color: #0f0f0f;
+  gap: 10px 10px;
+}
+
+#prev-button,
+#next-button,
+#clear-button,
+#add-random-button,
+#skip-steps,
+#get-file,
+#skip-end {
+  background-color: #232d3f;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 10%;
+  flex: 0 1 140px;
+  transition: 0.8 ease-in-out;
+  /* margin-right: 50px; */
+}
+#prev-button:hover,
+#next-button:hover,
+#clear-button:hover,
+#add-random-button:hover,
+#skip-steps:hover,
+#get-file:hover,
+#skip-end:hover{
+  background-color: #005b41;
+  scale: 1.1;
+}
+
+#page1-button:hover,
+#page2-button:hover {
+  background-color: gray;
+  scale: 1.1;
+}
+#prev-button:disabled,
+#next-button:disabled,
+#clear-button:disabled,
+#add-random-button:disabled,
+#skip-steps:disabled,
+#get-file:disabled,
+#skip-end:disabled {
+  background-color: rgb(39, 39, 39); /* Light gray */
+  color: #666666; /* Dark gray */
+  cursor: not-allowed;
+}
+
+#instruction {
+  margin: 0;
+}
+
+/* CSS code */
+/* Classes for all points*/
+@keyframes fadeInOut {
+  0% {
+    opacity: 0; /* Start with fully transparent */
+  }
+  30% {
+    opacity: 0.5; /* Fade in halfway through */
+  }
+  100% {
+    opacity: 1; /* Fade out at the end */
+  }
+}
+/* Add animation for points */
+circle,
+.dot {
+  fill: rgb(118, 1, 252);
+  stroke: none;
+  animation: fadeInOut 0.5s ease forwards;
+  r: 7;
+}
+.left {
+  fill: green;
+}
+.right {
+  fill: pink;
+}
+
+/* Add animation for lines */
+@keyframes drawLine {
+  from {
+    stroke-dashoffset: 1000; /* Start with a fully-dashed line */
+  }
+  to {
+    stroke-dashoffset: 0; /* Transition to a fully-visible line */
+  }
+  from {
+    stroke-opacity: 0; /* Start with a fully-transparent line */
+  }
+  to {
+    stroke-opacity: 1; /* Transition to a fully-visible line */
+  }
+}
+
+/* Classes for all lines*/
+line {
+  animation: drawLine 0.4s ease forwards; /* Apply the animation */
+}
+.dashed-line {
+  stroke-dasharray: 10, 10; /* Set the dash pattern for dashed lines */
+  stroke-dashoffset: 1000; /* Initially hide the dashed line */
+  stroke: teal;
+}
+.divider {
+  stroke: white;
+  stroke-dasharray: 10, 10; /* Set the dash pattern for dashed lines */
+  stroke-dashoffset: 1000; /* Initially hide the dashed line */
+}
+.medianx {
+  stroke: pink;
+  stroke-dasharray: 10, 10; /* Set the dash pattern for dashed lines */
+  stroke-dashoffset: 1000; /* Initially hide the dashed line */
+}
+.solid-line {
+  /* Set the stroke color */
+  stroke-width: 2.5; /* Set the stroke width */
+  animation: drawLine 0.4s ease forwards;
+}
+.random-pair-line {
+  stroke: rgb(255, 255, 120);
+  animation: drawLine 0.4s ease forwards;
+}
+.median-slope {
+  stroke: rgb(0, 155, 0);
+}
+.support {
+  stroke: violet;
+  stroke-dasharray: 10, 10; /* Set the dash pattern for dashed lines */
+}
+.hull {
+  /* Set the stroke color */
+  stroke: red;
+  stroke-width: 2.5; /* Set the stroke width */
+  animation: drawLine 0.4s ease forwards;
+}
+.trapezium {
+  stroke: yellow;
+  stroke-dasharray: 10, 10; /* Set the dash pattern for dashed lines */
+}
